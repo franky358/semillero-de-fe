@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import Lottie from "lottie-react";
-import seedData from "../on-animation.json";
+import seedData from "../off-animation.json";
 
 const SeedAnimation: React.FC = () => {
-  const [status, setStatus] = useState("on");
+  const [status, setStatus] = useState("off");
 
   return (
     <>
-      <div
-        className={`h-60 mt-16 relative ${
-          status === "off" && "h-36 border-2"
-        } `}
-      >
+      <div className={`h-60 mt-16 relative ${status === "off" && "h-36"} `}>
         <Lottie
           animationData={seedData}
           loop={true}
